@@ -1,0 +1,69 @@
+package march28;
+import java.util.Scanner;
+import java.lang.ArrayIndexOutOfBoundsException;
+class Branchcode
+{
+	int e,tbcode;
+	
+	public int regAccount(int e,int arr[],int bc)
+	   {
+		   int count=0,temp=0,no_of_acc=0;
+		   System.out.println("the branch code is:");
+		   for(int i=0;i<=e;i++)
+		   {
+			   temp=arr[i];
+			   tbcode=temp/100;
+			   if(tbcode==bc)
+			   {
+				   count++;
+			   }
+			   
+			   System.out.println(tbcode);
+			   }
+		return temp;
+		   
+		
+	
+	   }
+	
+
+	
+	   
+}
+
+public class Ex6 
+{
+   public static void main(String args[])
+   {
+	   try
+	   {
+	   int bc=0, no_of_acc=0;
+	   Scanner sc=new Scanner(System.in);
+	   System.out.println("enter number of elements u want to enter in array:");
+	   int e=sc.nextInt();
+	   int[] arr=new int[e];
+	   System.out.println("enter elements:");
+	   for(int i=0;i<e;i++)
+	   {
+		   arr[i]=sc.nextInt();
+	   }
+	  
+	   Branchcode b=new Branchcode();
+	   b.regAccount(e, arr,bc);
+	   
+	  
+	   
+	   }
+	   catch(ArrayIndexOutOfBoundsException ae)
+	   {
+		   System.out.println();
+	   
+   } 
+   }
+
+
+	   
+	   
+}
+
+
