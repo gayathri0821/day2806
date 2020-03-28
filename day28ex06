@@ -1,69 +1,85 @@
+//create package
 package march28;
+//import the preddefined classes in java
 import java.util.Scanner;
 import java.lang.ArrayIndexOutOfBoundsException;
+//create class branchcode
 class Branchcode
 {
+        //initialize variables     
 	int e,tbcode;
-	
+	//create regacoount method
 	public int regAccount(int e,int arr[],int bc)
 	   {
+	           //initialize the variables
 		   int count=0,temp=0,no_of_acc=0;
+		   //propmt the user for taking branch code
 		   System.out.println("the branch code is:");
+		   //using for loop
 		   for(int i=0;i<=e;i++)
 		   {
+		            //checking given conditions
 			   temp=arr[i];
 			   tbcode=temp/100;
 			   if(tbcode==bc)
 			   {
 				   count++;
-			   }
-			   
+			   }//end of if block
+			   //prompt the user for taking bcode
 			   System.out.println(tbcode);
-			   }
+			   }//end of for loop
 		return temp;
 		   
 		
 	
-	   }
+	   }//end of method
 	
 
 	
 	   
-}
-
+}//end of classblock
+//create main classEx6
 public class Ex6 
 {
+//create main method
    public static void main(String args[])
    {
+           //using try cacth block to handle exceptions
 	   try
 	   {
+	   //initialize variables
 	   int bc=0, no_of_acc=0;
+	   //taking input values through scanner calss
 	   Scanner sc=new Scanner(System.in);
+	   //prompt the user for no.of taking values
 	   System.out.println("enter number of elements u want to enter in array:");
 	   int e=sc.nextInt();
+	   //store values into an array
 	   int[] arr=new int[e];
 	   System.out.println("enter elements:");
+	   //using for loop to take values
 	   for(int i=0;i<e;i++)
 	   {
 		   arr[i]=sc.nextInt();
 	   }
-	  
+	  //create an object for branchcode
 	   Branchcode b=new Branchcode();
+	   //calling regaccount method
 	   b.regAccount(e, arr,bc);
 	   
 	  
 	   
-	   }
+	   }//end of try block
 	   catch(ArrayIndexOutOfBoundsException ae)
 	   {
 		   System.out.println();
 	   
-   } 
-   }
+   } //endofcatch block
+   }//end of main method
 
 
 	   
 	   
-}
+}//end of main class
 
 
